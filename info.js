@@ -34,9 +34,16 @@ function getPokemonInfo(url) {
     .then((data) => {
       // Make sure data comes throufg
       console.log(data);
-      // Write data to pokemon information container
-      document.querySelector(".pokemon-info").innerHTML = `
-    <img class="poke-images" src="${data.sprites.front_default} ">
+      fetch(data.species.url)
+        .then((res) => res.json())
+        .then((speciesData) => {
+          console.log(speciesData);
+          // Write data to pokemon information container
+          document.querySelector(".pokemon-info").innerHTML = `
+        <img class="poke-background" src="./images.jpeg">
+        <img class="poke-images" src="${data.sprites.front_default} ">
+        <p>${speciesData.flavor_text_entries[0].flavor_text}</p>
     `;
+        });
     });
 }

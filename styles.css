@@ -2,10 +2,14 @@
   box-sizing: border-box;
 }
 body {
-  background-image: url(./pokemon.jpeg);
+  background-color: lightblue;
   /* -webkit-filter: blur(10px); */
   backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
 .pokemon-image {
   size: 10px;
 }
@@ -13,13 +17,14 @@ body {
   padding: 1%;
   margin-top: 50px;
   margin-left: 50px;
+  margin-bottom: 5%;
   width: 200px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: maroon;
+  background-color: darkblue;
   border: none;
   border-radius: 15px;
   box-shadow: 0 9px #999;
@@ -31,26 +36,43 @@ body {
 }
 
 .nextButton:active {
-  background-color: maroon;
+  background-color: darkblue;
   box-shadow: 0 5px #666;
   transform: translateY(4px);
   color: white;
 }
 
 .pokemon-button {
-  padding: 2%;
+  padding: 0.5%;
   margin-top: 100px;
   margin-left: 50px;
   justify-content: center;
   align-items: center;
-  width: 15%;
+  width: 10%;
   font-size: 20px;
   text-transform: capitalize;
+  border-width: 5px;
+  border-color: darkblue;
+  box-shadow: black 5px 10px;
+}
+.pokemon-button:hover {
+  transition: all 0.3s linear;
+  font-size: 22px;
+  padding: 1%;
 }
 
-h1 {
-  margin-bottom: 50px;
-}
 .poke-images {
-  font-size: 50vh;
+  height: 300px;
+  width: 300px;
+  border: black solid 2px;
+  background-size: 300px;
+  padding: 3%;
+  position: relative;
+}
+
+.poke-background {
+  position: absolute;
+  height: 300px;
+  width: 300px;
+  opacity: 0.5;
 }
