@@ -41,7 +41,7 @@ function getPokemonInfo(url) {
           // Write data to pokemon information container
           document.querySelector(".pokemon-info").innerHTML = `
         <img class="poke-background" src="./images.jpeg">
-        <img class="poke-images" src="${data.sprites.front_default} ">
+        <img class="poke-images" src="${data.sprites.other.dream_world.front_default} ">
         <p>${speciesData.flavor_text_entries[0].flavor_text}</p>
     `;
         });
