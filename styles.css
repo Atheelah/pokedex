@@ -79,3 +79,7 @@ body {
   width: 300px;
   opacity: 0.5;
 }
+
+.pokemon-info {
+  text-align: center;
+}
