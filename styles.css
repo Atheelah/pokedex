@@ -55,6 +55,7 @@ body {
   border-width: 5px;
   border-color: darkblue;
   box-shadow: black 5px 10px;
+  text-align: center;
 }
 .pokemon-button:hover {
   transition: all 0.3s linear;
